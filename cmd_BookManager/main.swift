@@ -22,3 +22,21 @@ myBookManager.registerBook(bookObject: book3)
 print(myBookManager.showAllBooks())
 print("Book Count : \(myBookManager.countBooks())")
 
+//MARK: forced unwrapping
+//var searchResult = myBookManager.searchBook(name: "햄릿")
+//
+//if searchResult != nil {
+//    print("\(searchResult!) 를 찾았습니다.")
+//}else {
+//    print("찾으시는 책이 없십니다.")
+//}
+
+if let searchResult = myBookManager.searchBook(name: "햄릿"){
+    print(" \(searchResult) 를 찾았습니다.")
+}else{
+    print("찾으시는 책이 없십니다.")
+}
+
+print(myBookManager.showAllBooks())
+myBookManager.removeBook(name: "죄와벌")
+print(myBookManager.showAllBooks())
